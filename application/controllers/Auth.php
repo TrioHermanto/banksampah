@@ -48,7 +48,7 @@ class Auth extends CI_Controller
                     ];
 
                     $this->session->set_userdata($data);
-                    redirect('user');
+                    redirect('nasabah');
                 } else {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password salah!</div>');
                     redirect('auth');
@@ -82,7 +82,7 @@ class Auth extends CI_Controller
             $this->load->view('templates/auth_footer');
         } else {
             $data = [
-                'image' => ('default.jpg'),
+                'image' => ('default.png'),
                 'name' => htmlspecialchars($this->input->post('name', true)),
                 'email' => htmlspecialchars($this->input->post('email', true)),
                 'password' => password_hash($this->input->post('password1'), PASSWORD_DEFAULT),
