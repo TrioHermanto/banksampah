@@ -10,7 +10,6 @@
         <div class="card-bg preload-img" data-src="<?php echo base_url('vendor/pengguna/assets/'); ?>images/pictures/20s.jpg"></div>
     </div>
 
-
     <!-- Homepage Slider-->
     <div class="single-slider-boxed text-center owl-no-dots owl-carousel">
         <div class="card rounded-l shadow-l" data-card-height="320">

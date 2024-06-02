@@ -18,4 +18,12 @@ class Nasabah extends CI_Controller
         $this->load->view('nasabah/account', $data);
         $this->load->view('templates/nasabah_footer');
     }
+
+    public function editprofile()
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $this->load->view('templates/nasabah_header');
+        $this->load->view('nasabah/editprofile', $data);
+        $this->load->view('templates/nasabah_footer');
+    }
 }
