@@ -15,7 +15,7 @@
                 <img src="<?php echo base_url('assets/img/profile/') . $user['image']; ?>" style="height: 100px; width: 100px; border-radius:50%; background-color:lightgray;">
             </div>
             <div class="text-nama mt-2" style="text-align: center;"><?php echo $user['name']; ?></div>
-            <div class="text-nama" style="text-align: center;"><?php echo $user['email']; ?></div>
+            <div class="text-nama" style="text-align: center;"> Nasabah mulai <?php echo date('d F Y', $user['date_created']); ?></div>
         </div>
     </div>
 
