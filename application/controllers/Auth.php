@@ -115,4 +115,9 @@ class Auth extends CI_Controller
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Anda berhasil logout!</div>');
         redirect('auth');
     }
+
+    public function block()
+    {
+        echo 'wle';
+    }
 }
