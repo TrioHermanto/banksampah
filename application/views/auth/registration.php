@@ -8,7 +8,7 @@
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4"><b>Daftar Account!</b></h1>
+                                <h1 class="h4 text-gray-900 mb-4"><b>Pengajuan Account Nasabah!</b></h1>
                             </div>
                             <form class="user" method="post" action="<?php echo base_url('auth/registration'); ?>">
                                 <div class="form-group">
@@ -49,9 +49,6 @@
                                 </button>
                             </form>
                             <hr>
-                            <div class="text-center">
-                                <a class="small" href="forgot-password.html">Lupa Password?</a>
-                            </div>
                             <div class="text-center">
                                 <a class="small" href="<?php echo base_url();  ?>auth">Sudah Punya account? Login!</a>
                             </div>

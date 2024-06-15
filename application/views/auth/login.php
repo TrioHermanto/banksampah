@@ -25,23 +25,23 @@
                                             <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
                                             <?php echo form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
                                                 <input type="checkbox" class="custom-control-input" id="customCheck">
                                                 <label class="custom-control-label" for="customCheck">Remember
                                                     Me</label>
                                             </div>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
+                                        </div> -->
+                                        <button type="submit" class="btn btn-primary btn-user btn-block mt-4">
                                             Login
                                         </button>
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                        <a class="small" href="forgot-password.html">Lupa Password?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="<?php echo base_url();  ?>auth/registration">Daftar Account</a>
+                                        <a class="small" href="<?php echo base_url();  ?>auth/registration">Daftar Pengajuan Account Nasabah</a>
                                     </div>
                                 </div>
                             </div>

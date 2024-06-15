@@ -116,8 +116,8 @@ class Auth extends CI_Controller
         redirect('auth');
     }
 
-    public function block()
+    public function blocked()
     {
-        echo 'wle';
+        $this->load->view('auth/blocked');
     }
 }
