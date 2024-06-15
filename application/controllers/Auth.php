@@ -10,6 +10,10 @@ class Auth extends CI_Controller
 
     public function index()
     {
+        if ($this->session->userdata('email')) {
+            redirect('auth/blocked');
+        }
+
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email', [
             'required' => 'kolom harus diisi, tidak boleh kosong!',
             'valid_email' => 'email tidak sesuai!'
