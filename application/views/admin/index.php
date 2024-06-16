@@ -181,56 +181,30 @@
                     </li>
                     <li class="dropdown pc-h-item header-user-profile">
                         <a class="pc-head-link head-link-primary dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            <img src="<?php echo base_url('vendor/admindashboard/') ?>assets/images/user/avatar-2.jpg" alt="user-image" class="user-avtar" />
+                            <img src="<?php echo base_url('assets/img/profile/') . $user['image']; ?>" alt="user-image" class="user-avtar" />
                             <span>
                                 <i class="ti ti-settings"></i>
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown">
                             <div class="dropdown-header">
-                                <h4>Good Morning, <span class="small text-muted"> John Doe</span></h4>
-                                <p class="text-muted">Project Admin</p>
-                                <form class="header-search">
-                                    <i class="ti ti-search icon-search"></i>
-                                    <input type="search" class="form-control" placeholder="Search profile options" />
-                                </form>
+                                <h4>Selamat Datang, <span class="small text-muted"><?php echo $user['name']; ?></span></h4>
+                                <p class="text-muted">Administrator</p>
                                 <hr />
-                                <div class="profile-notification-scroll position-relative" style="max-height: calc(100vh - 280px)">
-                                    <div class="upgradeplan-block bg-light-warning rounded">
-                                        <h4>Explore full code</h4>
-                                        <p class="text-muted">Buy now to get full access of code files</p>
-                                        <a href="https://codedthemes.com/item/berry-bootstrap-5-admin-template/" target="_blank" class="btn btn-warning">Buy Now</a>
-                                    </div>
-                                    <hr />
-                                    <div class="settings-block bg-light-primary rounded">
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-                                            <label class="form-check-label" for="flexSwitchCheckDefault">Start DND Mode</label>
-                                        </div>
-                                        <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
-                                            <label class="form-check-label" for="flexSwitchCheckChecked">Allow Notifications</label>
-                                        </div>
-                                    </div>
-                                    <hr />
-                                    <a href="#" class="dropdown-item">
-                                        <i class="ti ti-settings"></i>
-                                        <span>Account Settings</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item">
-                                        <i class="ti ti-user"></i>
-                                        <span>Social Profile</span>
-                                    </a>
-                                    <a href="<?php echo base_url('vendor/admindashboard/') ?>pages/login-v3.html" class="dropdown-item">
-                                        <i class="ti ti-logout"></i>
-                                        <span>Logout</span>
-                                    </a>
-                                </div>
+                                <a href="#" class="dropdown-item">
+                                    <i class="ti ti-settings"></i>
+                                    <span>Account Settings</span>
+                                </a>
+                                <a href="<?php echo base_url('vendor/admindashboard/') ?>pages/login-v3.html" class="dropdown-item">
+                                    <i class="ti ti-logout"></i>
+                                    <span>Logout</span>
+                                </a>
                             </div>
                         </div>
-                    </li>
-                </ul>
             </div>
+            </li>
+            </ul>
+        </div>
         </div>
     </header>
     <!-- [ Header ] end -->
@@ -253,42 +227,41 @@
                         <a href="<?php echo base_url('vendor/admindashboard/') ?>dashboard/index.html" class="pc-link"><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Dashboard</span></a>
                     </li>
                     <li class="pc-item pc-caption">
-                        <label>Pages</label>
+                        <label>Data User</label>
                         <i class="ti ti-news"></i>
                     </li>
                     <li class="pc-item pc-hasmenu">
-                        <a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-key"></i></span><span class="pc-mtext">Authentication</span><span class="pc-arrow"><i class="ti ti-chevron-right"></i></span></a>
+                        <a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-user"></i></span><span class="pc-mtext">User</span><span class="pc-arrow"><i class="ti ti-chevron-right"></i></span></a>
                         <ul class="pc-submenu">
-                            <li class="pc-item"><a class="pc-link" target="_blank" href="<?php echo base_url('vendor/admindashboard/') ?>pages/login-v3.html">Login</a></li>
-                            <li class="pc-item"><a class="pc-link" target="_blank" href="<?php echo base_url('vendor/admindashboard/') ?>pages/register-v3.html">register</a></li>
+                            <li class="pc-item"><a class="pc-link" target="_blank" href="#">Administrator</a></li>
+                            <li class="pc-item"><a class="pc-link" target="_blank" href="#">Petugas</a></li>
+                            <li class="pc-item"><a class="pc-link" target="_blank" href="#">Nasabah</a></li>
                         </ul>
                     </li>
 
                     <li class="pc-item pc-caption">
-                        <label>Elements</label>
-                        <i class="ti ti-apps"></i>
+                        <label>Data Sampah</label>
+                        <i class="ti ti-news"></i>
                     </li>
-                    <li class="pc-item">
-                        <a href="<?php echo base_url('vendor/admindashboard/') ?>elements/bc_typography.html" class="pc-link"><span class="pc-micon"><i class="ti ti-typography"></i></span><span class="pc-mtext">Typography</span></a>
-                    </li>
-                    <li class="pc-item">
-                        <a href="<?php echo base_url('vendor/admindashboard/') ?>elements/bc_color.html" class="pc-link"><span class="pc-micon"><i class="ti ti-brush"></i></span><span class="pc-mtext">Color</span></a>
-                    </li>
-                    <li class="pc-item">
-                        <a href="https://tablericons.com" class="pc-link" target="_blank"><span class="pc-micon"><i class="ti ti-plant-2"></i></span><span class="pc-mtext">Tabler</span><span class="pc-arrow"></a>
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link"><span class="pc-micon"><i class="ti ti-trash"></i></span><span class="pc-mtext">Sampah</span><span class="pc-arrow"><i class="ti ti-chevron-right"></i></span></a>
+                        <ul class="pc-submenu">
+                            <li class="pc-item"><a class="pc-link" target="_blank" href="#">Detail Sampah</a></li>
+                            <li class="pc-item"><a class="pc-link" target="_blank" href="#">Laporan Sampah</a></li>
+                        </ul>
                     </li>
 
                     <li class="pc-item pc-caption">
                         <label>Other</label>
                         <i class="ti ti-brand-chrome"></i>
                     </li>
-                    <li class="pc-item"><a href="<?php echo base_url('vendor/admindashboard/') ?>other/sample-page.html" class="pc-link"><span class="pc-micon"><i class="ti ti-brand-chrome"></i></span><span class="pc-mtext">Sample page</span></a></li>
-                    <li class="pc-item"><a href="https://codedthemes.gitbook.io/berry-bootstrap/" target="_blank" class="pc-link"><span class="pc-micon"><i class="ti ti-vocabulary"></i></span><span class="pc-mtext">Document</span></a></li>
+                    <li class="pc-item"><a href="#" class="pc-link"><span class="pc-micon"><i class="ti ti-credit-card"></i></span><span class="pc-mtext">Buku Tabungan</span></a></li>
+                    <li class="pc-item"><a href="#" class="pc-link"><span class="pc-micon"><i class="ti ti-map-pins"></i></span><span class="pc-mtext">Penjemputan Sampah</span></a></li>
+                    <li class="pc-item"><a href="#" class="pc-link"><span class="pc-micon"><i class="ti ti-book"></i></span><span class="pc-mtext">Pendaftaran Nasabah</span></a></li>
+                    <li class="pc-item"><a href="#" class="pc-link"><span class="pc-micon"><i class="ti ti-settings"></i></span><span class="pc-mtext">Pengaturan</span></a></li>
                 </ul>
                 <div class="pc-navbar-card bg-primary rounded">
-                    <h4 class="text-white">Berry Pro</h4>
-                    <p class="text-white opacity-75">Checkout Berry pro features</p>
-                    <a href="https://codedthemes.com/item/berry-bootstrap-5-admin-template/" target="_blank" class="btn btn-light text-primary">Pro</a>
+                    <a href="<?php echo base_url('auth/logout'); ?>" target="_blank" class="btn btn-light text-primary" style="width: 100%;">LogOut</a>
                 </div>
             </div>
         </div>
@@ -303,35 +276,8 @@
             <!-- [ Main Content ] start -->
             <div class="row">
                 <!-- [ sample-page ] start -->
-                <div class="col-xl-4 col-md-6">
-                    <div class="card bg-secondary-dark dashnum-card text-white overflow-hidden">
-                        <span class="round small"></span>
-                        <span class="round big"></span>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col">
-                                    <div class="avtar avtar-lg">
-                                        <i class="text-white ti ti-credit-card"></i>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="btn-group">
-                                        <a type="button" class="avtar bg-secondary dropdown-toggle arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="ti ti-dots"></i>
-                                        </a>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                            <li><button class="dropdown-item" type="button">Import Card</button></li>
-                                            <li><button class="dropdown-item" type="button">Export</button></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <span class="text-white d-block f-34 f-w-500 my-2">1350 <i class="ti ti-arrow-up-right-circle opacity-50"></i></span>
-                            <p class="mb-0 opacity-50">Total Pending Orders</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
+
+                <div class="col-xl-8 col-md-6">
                     <div class="card bg-primary-dark dashnum-card text-white overflow-hidden">
                         <span class="round small"></span>
                         <span class="round big"></span>
@@ -339,7 +285,7 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="avtar avtar-lg">
-                                        <i class="text-white ti ti-credit-card"></i>
+                                        <i class="text-white ti ti-scale"></i>
                                     </div>
                                 </div>
                                 <div class="col-auto">
@@ -357,8 +303,8 @@
                                 <div class="tab-pane show active" id="chart-tab-home" role="tabpanel" aria-labelledby="chart-tab-home-tab" tabindex="0">
                                     <div class="row">
                                         <div class="col-6">
-                                            <span class="text-white d-block f-34 f-w-500 my-2">$130<i class="ti ti-arrow-up-right-circle opacity-50"></i></span>
-                                            <p class="mb-0 opacity-50">Total Earning</p>
+                                            <span class="text-white d-block f-34 f-w-500 my-2">130 Kg<i class="ti ti-arrow-up-right-circle opacity-50"></i></span>
+                                            <p class="mb-0 opacity-50">Total Penimbangan Sampah</p>
                                         </div>
                                         <div class="col-6">
                                             <div id="tab-chart-1"></div>
@@ -387,11 +333,11 @@
                         <div class="card-body p-3">
                             <div class="d-flex align-items-center">
                                 <div class="avtar avtar-lg">
-                                    <i class="text-white ti ti-credit-card"></i>
+                                    <i class="text-white ti ti-users"></i>
                                 </div>
                                 <div class="ms-2">
-                                    <h4 class="text-white mb-1">$203k <i class="ti ti-arrow-up-right-circle opacity-50"></i></h4>
-                                    <p class="mb-0 opacity-50 text-sm">Net Profit</p>
+                                    <h4 class="text-white mb-1">50 <i class="ti ti-arrow-up-right-circle opacity-50"></i></h4>
+                                    <p class="mb-0 opacity-50 text-sm">Jumlah Petugas</p>
                                 </div>
                             </div>
                         </div>
@@ -402,11 +348,11 @@
                         <div class="card-body p-3">
                             <div class="d-flex align-items-center">
                                 <div class="avtar avtar-lg bg-light-warning">
-                                    <i class="text-warning ti ti-credit-card"></i>
+                                    <i class="text-warning ti ti-users"></i>
                                 </div>
                                 <div class="ms-2">
-                                    <h4 class="mb-1">$550K <i class="ti ti-arrow-up-right-circle opacity-50"></i></h4>
-                                    <p class="mb-0 opacity-50 text-sm">Total Revenue</p>
+                                    <h4 class="mb-1">500 <i class="ti ti-arrow-up-right-circle opacity-50"></i></h4>
+                                    <p class="mb-0 opacity-50 text-sm">Jumlah Nasabah</p>
                                 </div>
                             </div>
                         </div>
@@ -423,7 +369,6 @@
                                 </div>
                                 <div class="col-auto">
                                     <select class="form-select p-r-35">
-                                        <option>Today</option>
                                         <option selected>This Month</option>
                                         <option>This Year</option>
                                     </select>
@@ -438,7 +383,7 @@
                         <div class="card-body">
                             <div class="row mb-3 align-items-center">
                                 <div class="col">
-                                    <h4>Popular Stocks</h4>
+                                    <h4>Ranking Keaktifan Nasabah</h4>
                                 </div>
                                 <div class="col-auto"> </div>
                             </div>
@@ -519,6 +464,8 @@
                         </div>
                     </div>
                 </div>
+
+
                 <!-- [ sample-page ] end -->
             </div>
             <!-- [ Main Content ] end -->
@@ -528,15 +475,9 @@
     <footer class="pc-footer">
         <div class="footer-wrapper container-fluid">
             <div class="row">
-                <div class="col my-1">
-                    <p class="m-0">Copyright &copy; <a href="https://codedthemes.com/" target="_blank">Codedthemes</a></p>
-                </div>
+                <div class="col my-1"></div>
                 <div class="col-auto my-1">
-                    <ul class="list-inline footer-link mb-0">
-                        <li class="list-inline-item"><a href="https://codedthemes.com/" target="_blank">Home</a></li>
-                        <li class="list-inline-item"><a href="https://codedthemes.com/privacy-policy/" target="_blank">Privacy Policy</a></li>
-                        <li class="list-inline-item"><a href="https://codedthemes.com/contact/" target="_blank">Contact us</a></li>
-                    </ul>
+                    <p class="m-0">Copyright &copy; <a href="https://codedthemes.com/" target="_blank">Codedthemes</a></p>
                 </div>
             </div>
         </div>
