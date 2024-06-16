@@ -36,7 +36,7 @@ class Nasabah extends CI_Controller
 
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/nasabah_header');
-            $this->load->view('nasabah/editprofile', $data);
+            $this->load->view('nasabah/editProfile', $data);
             $this->load->view('templates/nasabah_footer');
         } else {
             $email = $this->input->post('email');
@@ -55,11 +55,12 @@ class Nasabah extends CI_Controller
 
                 if ($this->upload->do_upload('image')) {
                     $old_image = $data['user']['image'];
-                    if($old_image != 'default.png') {
+                    if ($old_image != 'default.png') {
                         unlink(FCPATH . 'assets/img/profile/' . $old_image);
                     }
 
                     $new_image = $this->upload->data('file_name');
+                    $this->db->set('image', $new_image);
                 } else {
                     echo $this->upload->display_errors();
                 }
@@ -69,8 +70,7 @@ class Nasabah extends CI_Controller
                 'name' => $name,
                 'jk' => $jk,
                 'ttl' => $ttl,
-                'alamat' => $alamat,
-                'image' => $new_image
+                'alamat' => $alamat
             );
 
             $where = array(
