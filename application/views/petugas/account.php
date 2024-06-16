@@ -71,7 +71,7 @@
                             <i class="fa fa-angle-right mr-2"></i>
                         </a>
 
-                        <a href="<?php echo base_url('petugas/editprofile'); ?>">
+                        <a href="<?php echo base_url('petugas/editProfile'); ?>">
                             <i class="fa font-14 fa-user bg-green1-dark rounded-sm"></i>
                             <span>Edit Profile</span>
                             <strong>edit profile kamu disini.</strong>
