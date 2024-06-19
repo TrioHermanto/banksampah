@@ -29,10 +29,10 @@
             <a href="#" data-menu="menu-main" class="header-icon header-icon-1"><i class="fas fa-bars"></i></a>
         </div>
         <div id="footer-bar" class="footer-bar-5">
-            <a href="<?php echo base_url('nasabah'); ?>" class="active-nav"><i data-feather="home" data-feather-line="1" data-feather-size="21" data-feather-color="blue2-dark" data-feather-bg="blue2-fade-light"></i><span class="mt-1">Home</span></a>
+            <a href="<?php echo base_url('petugas'); ?>" class="active-nav"><i data-feather="home" data-feather-line="1" data-feather-size="21" data-feather-color="blue2-dark" data-feather-bg="blue2-fade-light"></i><span class="mt-1">Home</span></a>
             <a href="#" class="active-nav"><i data-feather="heart" data-feather-line="1" data-feather-size="21" data-feather-color="red2-dark" data-feather-bg="red2-fade-light"></i><span class="mt-1">Jemput</span></a>
             <a href="#" class="active-nav"><i data-feather="file" data-feather-line="1" data-feather-size="21" data-feather-color="brown1-dark" data-feather-bg="brown1-fade-light"></i><span class="mt-1">Riwayat</span></a>
-            <a href="<?php echo base_url('nasabah/account'); ?>" class="active-nav"><i data-feather="user" data-feather-line="1" data-feather-size="21" data-feather-color="gray2-dark" data-feather-bg="gray2-fade-light"></i><span class="mt-1">User</span></a>
+            <a href="<?php echo base_url('petugas/account'); ?>" class="active-nav"><i data-feather="user" data-feather-line="1" data-feather-size="21" data-feather-color="gray2-dark" data-feather-bg="gray2-fade-light"></i><span class="mt-1">User</span></a>
         </div>
         <div class="page-content">
 
@@ -51,7 +51,7 @@
                         <img src="<?php echo base_url('assets/img/profile/') . $user['image']; ?>" style="height: 100px; width: 100px; border-radius:50%; background-color:lightgray;">
                     </div>
                     <div class="text-nama mt-2" style="text-align: center;"><?php echo $user['name']; ?></div>
-                    <div class="text-nama" style="text-align: center;"> Nasabah mulai <?php echo date('d F Y', $user['date_created']); ?></div>
+                    <div class="text-nama" style="text-align: center;">Petugas mulai <?php echo date('d F Y', $user['date_created']); ?></div>
                 </div>
             </div>
 
@@ -64,17 +64,16 @@
                             <strong>lihat schedule harian disini.</strong>
                             <i class="fa fa-angle-right mr-2"></i>
                         </a>
-                        <a href="#">
-                            <i class="fa font-14 fa-qrcode bg-green1-dark rounded-sm"></i>
-                            <span>Buat Barcode</span>
-                            <strong>buat barcode monitoring tanaman disini.</strong>
-                            <i class="fa fa-angle-right mr-2"></i>
-                        </a>
-
                         <a href="<?php echo base_url('petugas/editProfile'); ?>">
                             <i class="fa font-14 fa-user bg-green1-dark rounded-sm"></i>
                             <span>Edit Profile</span>
                             <strong>edit profile kamu disini.</strong>
+                            <i class="fa fa-angle-right mr-2"></i>
+                        </a>
+                        <a href="<?php echo base_url('petugas/ubahPassword'); ?>">
+                            <i class="fa font-14 fa-key bg-green1-dark rounded-sm"></i>
+                            <span>Ubah Password</span>
+                            <strong>ubah passwordmu disini.</strong>
                             <i class="fa fa-angle-right mr-2"></i>
                         </a>
                         <a href="<?php echo base_url('auth/logout'); ?>">

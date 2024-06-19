@@ -75,4 +75,51 @@ class Petugas extends CI_Controller
             redirect('petugas/editProfile');
         }
     }
+
+    public function ubahPassword()
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->form_validation->set_rules('password_lama', 'Password Lama', 'required|trim', [
+            'required' => 'Kolom harus diisi, tidak boleh kosong!'
+        ]);
+        $this->form_validation->set_rules('password_baru1', 'Password Baru', 'required|trim|min_length[8]|matches[password_baru2]', [
+            'required' => 'Kolom harus diisi, tidak boleh kosong!',
+            'min_length' => 'Password minimal 8 charakter!',
+            'matches' => 'Password tidak sama!'
+        ]);
+        $this->form_validation->set_rules('password_baru2', 'Konfirmasi Password Baru', 'required|trim|min_length[8]|matches[password_baru1]', [
+            'required' => 'Kolom harus diisi, tidak boleh kosong!',
+            'matches' => 'Password tidak sama!'
+        ]);
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('petugas/ubahPassword', $data);
+        } else {
+            $password_lama = $this->input->post('password_lama');
+            $password_baru = $this->input->post('password_baru1');
+            if (!password_verify($password_lama, $data['user']['password'])) {
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password lama salah!</div>');
+                redirect('petugas/ubahPassword');
+            } else {
+                if ($password_lama == $password_baru) {
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password baru tidak boleh sama dengan password lama!</div>');
+                    redirect('petugas/ubahPassword');
+                } else {
+                    // password sudah ok
+                    $password_hash = password_hash($password_baru, PASSWORD_DEFAULT);
+
+                    $data = array(
+                        'password' => $password_hash
+                    );
+                    $where = array(
+                        'email' => $this->session->userdata('email')
+                    );
+                    $this->m_data->update_data($where, $data, 'user');
+                    $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Password berhasil diperbarui!</div>');
+                    redirect('petugas/ubahPassword');
+                }
+            }
+        }
+    }
 }
