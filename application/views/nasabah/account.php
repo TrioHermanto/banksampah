@@ -28,17 +28,16 @@
                     <strong>lihat schedule harian disini.</strong>
                     <i class="fa fa-angle-right mr-2"></i>
                 </a>
-                <a href="#">
-                    <i class="fa font-14 fa-qrcode bg-green1-dark rounded-sm"></i>
-                    <span>Buat Barcode</span>
-                    <strong>buat barcode monitoring tanaman disini.</strong>
-                    <i class="fa fa-angle-right mr-2"></i>
-                </a>
-
                 <a href="<?php echo base_url('nasabah/editProfile'); ?>">
                     <i class="fa font-14 fa-user bg-green1-dark rounded-sm"></i>
                     <span>Edit Profile</span>
                     <strong>edit profile kamu disini.</strong>
+                    <i class="fa fa-angle-right mr-2"></i>
+                </a>
+                <a href="<?php echo base_url('nasabah/ubahPassword'); ?>">
+                    <i class="fa font-14 fa-user bg-green1-dark rounded-sm"></i>
+                    <span>Ubah Password</span>
+                    <strong>Ubah Password kamu disini.</strong>
                     <i class="fa fa-angle-right mr-2"></i>
                 </a>
                 <a href="<?php echo base_url('auth/logout'); ?>">
