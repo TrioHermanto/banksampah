@@ -191,11 +191,11 @@
                                 <h4>Selamat Datang, <span class="small text-muted"><?php echo $user['name']; ?></span></h4>
                                 <p class="text-muted">Administrator</p>
                                 <hr />
-                                <a href="#" class="dropdown-item">
+                                <a href="<?php echo base_url('admin/editProfile'); ?>" class="dropdown-item">
                                     <i class="ti ti-settings"></i>
-                                    <span>Account Settings</span>
+                                    <span>Account</span>
                                 </a>
-                                <a href="<?php echo base_url('vendor/admindashboard/') ?>pages/login-v3.html" class="dropdown-item">
+                                <a href="<?php echo base_url('auth/logout') ?>" class="dropdown-item">
                                     <i class="ti ti-logout"></i>
                                     <span>Logout</span>
                                 </a>

@@ -15,10 +15,9 @@
         </div>
         <!-- [ breadcrumb ] end -->
 
-
         <!-- [ Main Content ] start -->
         <div class="row">
-            <!-- [ sample-page ] start -->
+            <!-- [ edit profile ] start -->
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header">
@@ -74,7 +73,41 @@
                     </div>
                 </div>
             </div>
-            <!-- [ sample-page ] end -->
+            <!-- [ edit profile ] end -->
+        </div>
+
+        <div class="row">
+            <!-- [ ubah password ] start -->
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Ubah Password</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="content mb-0">
+                            <form action="<?php echo base_url('admin/ubahPassword'); ?>" method="post">
+                                <div class="form-group input-style input-style-2 has-icon input-required">
+                                    <span class="color-highlight">Password Lama</span>
+                                    <input class="form-control form-control-user" type="password" id="password_lama" name="password_lama">
+                                    <?php echo form_error('password_lama', '<small class="text-danger pl-3">', '</small>'); ?>
+                                </div>
+                                <div class="form-group input-style input-style-2 has-icon input-required">
+                                    <span class="color-highlight">Password Baru</span>
+                                    <input class="form-control form-control-user" type="password" id="password_baru1" name="password_baru1">
+                                    <?php echo form_error('password_baru1', '<small class="text-danger pl-3">', '</small>'); ?>
+                                </div>
+                                <div class="form-group input-style input-style-2 has-icon input-required">
+                                    <span class="color-highlight">Masukan Password Baru</span>
+                                    <input class="form-control form-control-user" type="password" id="password_baru2" name="password_baru2">
+                                    <?php echo form_error('password_baru2', '<small class="text-danger pl-3">', '</small>'); ?>
+                                </div>
+                                <button type="submit" class="btn btn-success my-3" style="width:100%;">Ubah Password</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- [ ubah password ] end -->
         </div>
         <!-- [ Main Content ] end -->
     </div>

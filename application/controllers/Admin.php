@@ -75,4 +75,45 @@ class Admin extends CI_Controller
             redirect('admin/editProfile');
         }
     }
+
+    public function ubahPassword()
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->form_validation->set_rules('password_lama', 'Password Lama', 'required|trim');
+        $this->form_validation->set_rules('password_baru1', 'Password Baru', 'required|trim|min_length[8]|matches[password_baru2]');
+        $this->form_validation->set_rules('password_baru2', 'Konfirmasi Password Baru', 'required|trim|min_length[8]|matches[password_baru1]');
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/admin_header', $data);
+            $this->load->view('templates/admin_sidebar');
+            $this->load->view('admin/editProfile', $data);
+            $this->load->view('templates/admin_footer');
+        } else {
+            $password_lama = $this->input->post('password_lama');
+            $password_baru = $this->input->post('password_baru1');
+            if (!password_verify($password_lama, $data['user']['password'])) {
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password lama salah!</div>');
+                redirect('admin/ubahPassword');
+            } else {
+                if ($password_lama == $password_baru) {
+                    $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password baru tidak boleh sama dengan password lama!</div>');
+                    redirect('admin/ubahPassword');
+                } else {
+                    // password sudah ok
+                    $password_hash = password_hash($password_baru, PASSWORD_DEFAULT);
+
+                    $data = array(
+                        'password' => $password_hash
+                    );
+                    $where = array(
+                        'email' => $this->session->userdata('email')
+                    );
+                    $this->m_data->update_data($where, $data, 'user');
+                    $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Password berhasil diperbarui!</div>');
+                    redirect('admin/ubahPassword');
+                }
+            }
+        }
+    }
 }

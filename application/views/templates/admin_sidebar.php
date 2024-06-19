@@ -14,7 +14,7 @@
                     <i class="ti ti-dashboard"></i>
                 </li>
                 <li class="pc-item">
-                    <a href="<?php echo base_url('vendor/admindashboard/') ?>dashboard/index.html" class="pc-link"><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Dashboard</span></a>
+                    <a href="<?php echo base_url('admin'); ?>" class="pc-link"><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Dashboard</span></a>
                 </li>
                 <li class="pc-item pc-caption">
                     <label>Data User</label>
@@ -48,7 +48,7 @@
                 <li class="pc-item"><a href="#" class="pc-link"><span class="pc-micon"><i class="ti ti-credit-card"></i></span><span class="pc-mtext">Buku Tabungan</span></a></li>
                 <li class="pc-item"><a href="#" class="pc-link"><span class="pc-micon"><i class="ti ti-map-pins"></i></span><span class="pc-mtext">Penjemputan Sampah</span></a></li>
                 <li class="pc-item"><a href="#" class="pc-link"><span class="pc-micon"><i class="ti ti-book"></i></span><span class="pc-mtext">Pendaftaran Nasabah</span></a></li>
-                <li class="pc-item"><a href="<?php echo base_url('admin/editProfile'); ?>" class="pc-link"><span class="pc-micon"><i class="ti ti-settings"></i></span><span class="pc-mtext">Pengaturan</span></a></li>
+                <li class="pc-item"><a href="<?php echo base_url('admin/editProfile'); ?>" class="pc-link"><span class="pc-micon"><i class="ti ti-settings"></i></span><span class="pc-mtext">Account</span></a></li>
             </ul>
             <div class="pc-navbar-card bg-primary rounded">
                 <a href="<?php echo base_url('auth/logout'); ?>" target="_blank" class="btn btn-light text-primary" style="width: 100%;">LogOut</a>
