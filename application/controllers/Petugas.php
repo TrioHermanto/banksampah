@@ -76,7 +76,7 @@ class Petugas extends CI_Controller
         }
     }
 
-    public function ubahPassword()
+    public function ubahpasswordpetugas()
     {
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
@@ -94,17 +94,17 @@ class Petugas extends CI_Controller
         ]);
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('petugas/ubahPassword', $data);
+            $this->load->view('petugas/ubahpasswordpetugas', $data);
         } else {
             $password_lama = $this->input->post('password_lama');
             $password_baru = $this->input->post('password_baru1');
             if (!password_verify($password_lama, $data['user']['password'])) {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password lama salah!</div>');
-                redirect('petugas/ubahPassword');
+                redirect('petugas/ubahpasswordpetugas');
             } else {
                 if ($password_lama == $password_baru) {
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password baru tidak boleh sama dengan password lama!</div>');
-                    redirect('petugas/ubahPassword');
+                    redirect('petugas/ubahpasswordpetugas');
                 } else {
                     // password sudah ok
                     $password_hash = password_hash($password_baru, PASSWORD_DEFAULT);
@@ -117,7 +117,7 @@ class Petugas extends CI_Controller
                     );
                     $this->m_data->update_data($where, $data, 'user');
                     $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Password berhasil diperbarui!</div>');
-                    redirect('petugas/ubahPassword');
+                    redirect('petugas/ubahpasswordpetugas');
                 }
             }
         }

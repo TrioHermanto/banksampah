@@ -29,15 +29,15 @@
             <a href="#" data-menu="menu-main" class="header-icon header-icon-1"><i class="fas fa-bars"></i></a>
         </div>
         <div id="footer-bar" class="footer-bar-5">
-            <a href="<?php echo base_url('petugas'); ?>" class="active-nav"><i data-feather="home" data-feather-line="1" data-feather-size="21" data-feather-color="blue2-dark" data-feather-bg="blue2-fade-light"></i><span class="mt-1">Home</span></a>
+            <a href="<?php echo base_url('nasabah'); ?>" class="active-nav"><i data-feather="home" data-feather-line="1" data-feather-size="21" data-feather-color="blue2-dark" data-feather-bg="blue2-fade-light"></i><span class="mt-1">Home</span></a>
             <a href="#" class="active-nav"><i data-feather="heart" data-feather-line="1" data-feather-size="21" data-feather-color="red2-dark" data-feather-bg="red2-fade-light"></i><span class="mt-1">Jemput</span></a>
             <a href="#" class="active-nav"><i data-feather="file" data-feather-line="1" data-feather-size="21" data-feather-color="brown1-dark" data-feather-bg="brown1-fade-light"></i><span class="mt-1">Riwayat</span></a>
-            <a href="<?php echo base_url('petugas/account'); ?>" class="active-nav"><i data-feather="user" data-feather-line="1" data-feather-size="21" data-feather-color="gray2-dark" data-feather-bg="gray2-fade-light"></i><span class="mt-1">User</span></a>
+            <a href="<?php echo base_url('nasabah/account'); ?>" class="active-nav"><i data-feather="user" data-feather-line="1" data-feather-size="21" data-feather-color="gray2-dark" data-feather-bg="gray2-fade-light"></i><span class="mt-1">User</span></a>
         </div>
         <div class="page-content">
 
             <div class="page-title page-title-small">
-                <h2><a href="<?php echo base_url('petugas/account'); ?>" data-back-button><i class="fa fa-arrow-left"></i></a>Ubah Password</h2>
+                <h2><a href="<?php echo base_url('nasabah/account'); ?>" data-back-button><i class="fa fa-arrow-left"></i></a>Ubah Password</h2>
             </div>
             <div class="card header-card shape-rounded" data-card-height="210">
                 <div class="card-overlay bg-highlight opacity-95"></div>
@@ -46,7 +46,7 @@
             </div>
             <div class="card card-style">
                 <div class="content mb-0">
-                    <form action="<?php echo base_url('petugas/ubahPassword'); ?>" method="post">
+                    <form action="<?php echo base_url('nasabah/ubahpasswordnasabah'); ?>" method="post">
                         <div class="row" style="margin-left: 40px;">
                             <?php echo $this->session->flashdata('message'); ?>
                         </div>

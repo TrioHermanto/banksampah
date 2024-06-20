@@ -34,7 +34,7 @@
                     <strong>edit profile kamu disini.</strong>
                     <i class="fa fa-angle-right mr-2"></i>
                 </a>
-                <a href="<?php echo base_url('nasabah/ubahPassword'); ?>">
+                <a href="<?php echo base_url('nasabah/ubahpasswordnasabah'); ?>">
                     <i class="fa font-14 fa-user bg-green1-dark rounded-sm"></i>
                     <span>Ubah Password</span>
                     <strong>Ubah Password kamu disini.</strong>

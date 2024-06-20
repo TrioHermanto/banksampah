@@ -70,7 +70,7 @@
                             <strong>edit profile kamu disini.</strong>
                             <i class="fa fa-angle-right mr-2"></i>
                         </a>
-                        <a href="<?php echo base_url('petugas/ubahPassword'); ?>">
+                        <a href="<?php echo base_url('petugas/ubahpasswordpetugas'); ?>">
                             <i class="fa font-14 fa-key bg-green1-dark rounded-sm"></i>
                             <span>Ubah Password</span>
                             <strong>ubah passwordmu disini.</strong>
