@@ -38,7 +38,7 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="forgot-password.html">Lupa Password?</a>
+                                        <a class="small" href="<?php echo base_url('auth/lupapassword'); ?>">Lupa Password?</a>
                                     </div>
                                     <div class="text-center">
                                         <a class="small" href="<?php echo base_url();  ?>auth/registration">Daftar Pengajuan Account Nasabah</a>
